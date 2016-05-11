@@ -3,8 +3,10 @@
 #vars, sshid=username@server.com
 #remotepath=directory of files to download on remote server
 #targetpath=path on this machine to put remote files
-sshid='persa188@iits-b473-20046.utsc-labs.utoronto.ca'
-remotepath='~/../../courses/courses/cscc43s16/koudasni/*'
-targetpath= ~'/Dropbox/UTSC/UTSC_Shared\ Notes/CSCC43/lecnotes'
+sshid='username@remoteserver.com'
+remotepath='~/path_to_directory_on_remote_server'
+targetpath= '~/path to copy files to on local directory (make sure this folder exists)'
 
-scp $sshid:$remotepath "{$targetpath}"
+scp $sshid:$remotepath $targetpath
+
+>&1 echo upload success
